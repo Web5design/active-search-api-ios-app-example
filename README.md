@@ -10,12 +10,20 @@ http://developer.mashery.com
 SYNOPSIS
 ==================================================================
 This native iOS demo application was built to demonstrate how to
-integrate the Active.com search API (to find activites by location)
+integrate the [Active.com Search API](http://developer.active.com) (to find activites by location)
 and StackMob (to persist activity search result data in the cloud).
 
 This is a simple single page app that utilizes several native
 frameworks, a couple of external libraries, and a single Storyboard
 view controller scene.
+
+The interface contains a UISearchBar and Map View. During runtime,
+the end-user supplies either a postal code (e.g. 94103) or a city,
+state and country (e.g. Oakland, CA, US) and clicks Search. An API
+call is made to Active.com, searching for activities within a
+radius of the supplied location. The JSON results are parsed, with
+each activity pinned to the map view. Additionally, the activity
+data is persisted in the cloud using [StackMob](http://stackmob.com).
 
 
 REQUIREMENTS
